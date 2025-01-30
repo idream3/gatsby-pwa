@@ -13,13 +13,39 @@ const config: GatsbyConfig = {
     "gatsby-plugin-styled-components", {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        "icon": "src/images/icon.png"
+        lang: "en",
+        name: "Flicket Scanner",
+        short_name: "Flicket",
+        icons: [
+          {
+            src: "/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/android-chrome-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
+        theme_color: "#ffffff",
+        background_color: "#ffffff",
+        start_url: "/",
+        display: "standalone",
+        orientation: "natural",
       }
     },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/docs/`, `/about/`],
+        workboxConfig: {
+          globDirectory: "public/",
+          globPatterns: [
+            "**/*.{html,js,json,png,jpg,webmanifest,woff,woff2,ttf,eot,css,mjs}",
+          ],
+          swDest: "public/sw.js",
+        },
       },
     }]
 };
