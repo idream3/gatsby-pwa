@@ -1,0 +1,3 @@
+mutation expoDeleteNamingField($id: String!) {
+  expoDeleteNamingField(id: $id)
+}

@@ -1,0 +1,5 @@
+mutation nameExhibitorSession($name: String!) {
+  nameExhibitorSession(name: $name) {
+    scannerName
+  }
+}

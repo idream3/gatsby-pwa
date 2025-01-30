@@ -1,0 +1,10 @@
+mutation expoCreateOrUpdateNamingField($input: ExpoNamingFieldInput!) {
+  expoCreateOrUpdateNamingField(input: $input) {
+    id
+    # name
+    # type
+    # label
+    # required
+    # orderKey
+  }
+}

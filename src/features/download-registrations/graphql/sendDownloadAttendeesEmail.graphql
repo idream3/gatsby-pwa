@@ -1,0 +1,3 @@
+mutation sendDownloadAttendeesEmail($email: String!) {
+  sendDownloadAttendeesEmail(email: $email)
+}

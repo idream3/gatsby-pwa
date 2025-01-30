@@ -1,0 +1,19 @@
+mutation resendExhibitorLoginEmail($email: String!, $eventId: String) {
+  resendExhibitorLoginEmail(email: $email, eventId: $eventId) {
+    ... on ResendExhibitorLoginEmailSuccess {
+      __typename
+      success
+    }
+    ... on ResendExhibitorLoginEmailNotFound {
+      __typename
+      notFound
+    }
+    ... on ResendExhibitorLoginEmailMultipleFound {
+      __typename
+      events {
+        id
+        name
+      }
+    }
+  }
+}

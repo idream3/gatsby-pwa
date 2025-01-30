@@ -1,0 +1,9 @@
+query exhibitorProfile {
+  exhibitorProfile {
+    email
+    exhibitorName
+    scannerName
+    allowCustomQuestions
+    safeModeEnabled
+  }
+}

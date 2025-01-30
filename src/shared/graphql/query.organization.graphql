@@ -1,0 +1,102 @@
+# in our case the organization is not used anywhere else
+
+fragment File on ExtendedFile {
+  storage
+  directory
+  fileName
+  originalFileName
+  metaData {
+    width
+    height
+  }
+}
+
+query currentOrganization {
+  currentOrganization {
+    id
+    name
+    slug
+    showMemberships
+    showMembershipRenewal
+    landingPage
+    privacyPolicy
+    termsAndConditions
+    supportInfo
+    currency
+    taxRate
+    address {
+      country
+    }
+    shippingLabels {
+      eTicket
+      printedTicketByMail
+      printedTicketByCourier
+      printedTicketByCourierRural
+      printedTicketAtVenue
+    }
+    marketing {
+      gtmId
+      pixelId
+    }
+    shopify {
+      shopDomain
+      storefrontAccessToken
+    }
+    branding {
+      logo {
+        ...File
+      }
+      mobileLogo {
+        ...File
+      }
+      favicon {
+        ...File
+      }
+      background {
+        ...File
+      }
+      fullBackground {
+        ...File
+      }
+      greyScale
+      P300
+      P200
+      P100
+      S300
+      S200
+      S100
+      N800
+      N700
+      N600
+      N500
+      N400
+      N300
+      N200
+      N100
+    }
+    features
+    timezone
+    locale
+    helpLink
+    point {
+      name
+      isEnabled
+    }
+    defaultI18nLanguage
+    defaultLanguage
+    customTaxName
+    customFields {
+      id
+      label
+      value
+      targetArea
+      type
+    }
+    seekaConfig {
+      seekaOrganizationId
+      seekaPublicKey
+      seekaInstanceId
+      seekaScopeDescription
+    }
+  }
+}

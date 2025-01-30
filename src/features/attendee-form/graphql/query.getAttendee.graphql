@@ -1,0 +1,5 @@
+query getAttendee($id: String!) {
+  getAttendee(id: $id) {
+    ...attendeeFragment
+  }
+}

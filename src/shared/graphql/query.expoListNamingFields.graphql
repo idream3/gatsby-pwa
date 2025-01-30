@@ -1,0 +1,10 @@
+query expoListNamingFields {
+  expoListNamingFields {
+    id
+    name
+    type
+    label
+    required
+    orderKey
+  }
+}

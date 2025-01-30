@@ -1,0 +1,10 @@
+mutation createOrUpdateAttendee($input: ExpoAttendeeInput!) {
+  createOrUpdateAttendee(input: $input) {
+    id
+    # name
+    # type
+    # label
+    # required
+    # orderKey
+  }
+}

@@ -1,0 +1,24 @@
+fragment attendeeFragment on ExpoAttendee {
+  id
+  ticketId
+  organizationId
+  eventId
+  updatedAt
+  exhibitorId
+
+  email
+  phoneNumber
+  birthDate
+  postalCode
+  gender
+  companyName
+  notes
+  optInToMarketing
+  firstName
+  lastName
+  customFields {
+    id
+    fieldName
+    fieldValue
+  }
+}

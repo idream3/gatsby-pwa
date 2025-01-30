@@ -1,0 +1,66 @@
+query exhibitorContext {
+  exhibitorContext {
+    profile {
+      email
+      exhibitorName
+      scannerName
+      allowCustomQuestions
+      safeModeEnabled
+    }
+    event {
+      id
+      title
+      startDate
+      endDate
+      venue {
+        timezone
+        locale
+      }
+    }
+    organization {
+      id
+      name
+      slug
+      landingPage
+      privacyPolicy
+      termsAndConditions
+      supportInfo
+      currency
+      address {
+        country
+      }
+      branding {
+        logo {
+          ...File
+        }
+        mobileLogo {
+          ...File
+        }
+        favicon {
+          ...File
+        }
+        background {
+          ...File
+        }
+        fullBackground {
+          ...File
+        }
+        greyScale
+        P300
+        P200
+        P100
+        S300
+        S200
+        S100
+        N800
+        N700
+        N600
+        N500
+        N400
+        N300
+        N200
+        N100
+      }
+    }
+  }
+}

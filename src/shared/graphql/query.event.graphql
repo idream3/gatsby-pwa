@@ -1,0 +1,7 @@
+query event($id: String!) {
+  event(id: $id) {
+    id
+    title
+    hasPublicRelease
+  }
+}

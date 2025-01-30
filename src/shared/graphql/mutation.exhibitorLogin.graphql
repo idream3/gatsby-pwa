@@ -1,0 +1,9 @@
+mutation exhibitorLogin($input: ExpoExhibitorLoginInput!) {
+  exhibitorLogin(input: $input) {
+    id
+    name
+    email
+    allowCustomQuestions
+    # numScans
+  }
+}

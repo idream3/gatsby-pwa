@@ -1,0 +1,3 @@
+mutation bulkCreateOrUpdateAttendee($input: BulkExpoAttendeeInput!) {
+  bulkCreateOrUpdateAttendee(input: $input)
+}

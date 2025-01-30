@@ -1,0 +1,36 @@
+query getAttendeeTicket($ticketNumber: String!) {
+  getAttendeeTicket(ticketNumber: $ticketNumber) {
+    attendeeId
+    ticket {
+      id
+      ticketNumber
+      isNamed
+      shouldBeNamed
+      memberSince
+      licensePlate
+      membershipNumber
+      comments
+      dietaryRequirements
+      lengthOfStay
+      usableForEmailMarketing
+      usableForSMSMarketing
+      emergencyName
+      emergencyContact
+      emergencyContactRelationship
+
+      email
+      phoneNumber
+      birthDate
+      postalCode
+      gender
+      companyName
+      firstName
+      lastName
+      customFields {
+        id
+        fieldName
+        fieldValue
+      }
+    }
+  }
+}

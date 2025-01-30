@@ -10,6 +10,18 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "~/src": "src",
+          "~/shared": "src/shared",
+          "~/features": "src/features",
+          "~/pages": "src/pages",
+        },
+        extensions: []
+      }
+    },
     "gatsby-plugin-styled-components", {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -31,7 +43,6 @@ const config: GatsbyConfig = {
           globPatterns: [
             "**/*.{html,js,json,png,jpg,webmanifest,woff,woff2,ttf,eot,css,mjs}",
           ],
-          // swDest: "public/sw.js",
         },
       },
     }]

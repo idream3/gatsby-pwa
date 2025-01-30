@@ -1,0 +1,23 @@
+projects:
+  default:
+    schema: http://127.0.0.1:3001/graphql
+    documents:
+      - src/**/*.graphql
+    extensions:
+      endpoints:
+        default:
+          url: http://127.0.0.1:3001/graphql
+      codegen:
+        generates:
+          src/shared/graphql/sdk.ts:
+            config:
+              scalars:
+                DateTime: string
+              dedupeFragments: true
+            plugins:
+              - typescript
+              - typescript-operations
+              - typescript-graphql-request
+        hooks:
+          afterStart:
+            - npx get-graphql-schema http://127.0.0.1:3001/graphql > schema.graphql
