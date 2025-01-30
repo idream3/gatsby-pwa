@@ -144,8 +144,12 @@ const IndexPage: React.FC<PageProps> = () => {
         <br />
       </h1>
 
+<div>
       <Link to="/about">About</Link>
-      <Link to="/docs">Docs</Link>
+      </div>
+<div>
+<Link to="/docs">Docs</Link>
+      </div>
      
     </main>
   )
