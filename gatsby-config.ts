@@ -44,7 +44,7 @@ const config: GatsbyConfig = {
           globPatterns: [
             "**/*.{html,js,json,png,jpg,webmanifest,woff,woff2,ttf,eot,css,mjs}",
           ],
-          swDest: "public/sw.js",
+          // swDest: "public/sw.js",
         },
       },
     }]
