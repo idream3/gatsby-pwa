@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -16,6 +16,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@radix-ui/react-dialog": "^1.1.5",
+    "@styled-system/props": "^5.1.5",
+    "@t3-oss/env-core": "^0.12.0",
+    "@tanstack/query-sync-storage-persister": "^5.64.2",
+    "@tanstack/react-form": "^0.39.0",
+    "@tanstack/react-query": "^5.65.1",
+    "@tanstack/react-query-persist-client": "^5.64.2",
+    "@tanstack/zod-form-adapter": "^0.39.0",
+    "@types/styled-system__props": "^5.1.3",
     "babel-plugin-styled-components": "^2.1.4",
     "flicket-ui": "^2.21.1",
     "gatsby": "^5.14.1",
@@ -23,14 +33,20 @@
     "gatsby-plugin-manifest": "^5.14.0",
     "gatsby-plugin-offline": "^6.14.0",
     "gatsby-plugin-styled-components": "^6.14.0",
+    "graphql-request": "^7.1.2",
+    "motion": "^12.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.14"
+    "sonner": "^1.7.3",
+    "styled-components": "^6.1.14",
+    "zod": "^3.24.1",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "@types/styled-system__props": "^5.1.3",
     "typescript": "^5.3.3"
   },
   "packageManager": "pnpm@9.4.0"

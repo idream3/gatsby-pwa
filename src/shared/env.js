@@ -1,7 +1,8 @@
-import { createEnv } from "@t3-oss/env-nextjs";
+import { createEnv } from "@t3-oss/env-core";
 import { z } from "zod";
 
 const regexNoLeadingOrTrailingSlash = /^[^/].*[^/]$/;
+console.log(process.env)
 
 export const env = createEnv({
   /**
@@ -17,18 +18,18 @@ export const env = createEnv({
   /**
    * Specify your client-side environment variables schema here. This way you can ensure the app
    * isn't built with invalid env vars. To expose them to the client, prefix them with
-   * `NEXT_PUBLIC_`.
+   * `GATSBY_`.
    */
   client: {
-    NEXT_PUBLIC_API_URL: z.string().url(),
-    NEXT_PUBLIC_GRAPH_URL: z.string().url(),
-    NEXT_PUBLIC_UPLOADS_FOLDER: z
+    GATSBY_API_URL: z.string().url(),
+    GATSBY_GRAPH_URL: z.string().url(),
+    GATSBY_UPLOADS_FOLDER: z
       .string()
       .regex(
         regexNoLeadingOrTrailingSlash,
         "No leading or trailing slash on folder name",
       ),
-    NEXT_PUBLIC_VERCEL_USER_TOKEN: z.string().optional().default("placeholder"),
+    GATSBY_VERCEL_USER_TOKEN: z.string().optional().default("placeholder"),
   },
 
   /**
@@ -37,10 +38,10 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-    NEXT_PUBLIC_GRAPH_URL: process.env.NEXT_PUBLIC_GRAPH_URL,
-    NEXT_PUBLIC_UPLOADS_FOLDER: process.env.NEXT_PUBLIC_UPLOADS_FOLDER,
-    NEXT_PUBLIC_VERCEL_USER_TOKEN: process.env.NEXT_PUBLIC_VERCEL_USER_TOKEN,
+    GATSBY_API_URL: process.env.GATSBY_API_URL,
+    GATSBY_GRAPH_URL: process.env.GATSBY_GRAPH_URL,
+    GATSBY_UPLOADS_FOLDER: process.env.GATSBY_UPLOADS_FOLDER,
+    GATSBY_VERCEL_USER_TOKEN: process.env.GATSBY_VERCEL_USER_TOKEN,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

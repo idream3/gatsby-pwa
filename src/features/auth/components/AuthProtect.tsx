@@ -1,7 +1,6 @@
-"use client";
-
-import { Text } from "@radix-ui/themes";
-import { usePathname, useRouter } from "next/navigation";
+import * as React from "react";
+import { navigate } from 'gatsby' 
+// import { useLocation } from "@reach/router";
 import { useEffect } from "react";
 import { exhibitorContext } from "~/shared/graphql/queries";
 import { useExhibitorContext } from "~/shared/hooks/useExhibitorContext.hook";
@@ -18,8 +17,8 @@ export default function AuthProtect({
   children: React.ReactNode;
   whitelist?: Whitelist[];
 }) {
-  const router = useRouter();
-  const pathname = usePathname();
+  
+  const pathname = "/login";//useLocation().pathname;
   const loginError = useAppStore((state) => state.loginError);
   const isOnline = useAppStore((state) => state.isOnline);
   const { setExhibitorContext, user } = useExhibitorContext();
@@ -32,7 +31,7 @@ export default function AuthProtect({
       );
 
       if (error && isOnline) {
-        router.replace("/login");
+        navigate("/login", { replace: true });
         return;
       }
 
@@ -44,7 +43,7 @@ export default function AuthProtect({
     if (!user && !(pathname in whitelist)) {
       void getExhibitorContext();
     }
-  }, [user, loginError, pathname, router, setExhibitorContext, whitelist]);
+  }, [user, loginError, pathname, setExhibitorContext, whitelist]);
 
   if (pathname === "/login") {
     return <>{children}</>;

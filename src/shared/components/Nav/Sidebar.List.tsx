@@ -1,10 +1,10 @@
-
+import * as React from "react";
 
 import { Text } from "~/shared/components/ui/Text";
 import { Stack } from "~/shared/components/ui/layout";
 import { Li } from "./Sidebar.styles";
 import Icon from "../ui/Icon";
-import Link from "next/link";
+import {Link} from "gatsby";
 
 export function List({
   title,
@@ -52,7 +52,7 @@ export function ListItem({
   if (href) {
     return (
       <Li onClick={onClick}>
-        <Link href={href}>{Content}</Link>
+        <Link to={href}>{Content}</Link>
       </Li>
     );
   }

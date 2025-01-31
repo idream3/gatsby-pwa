@@ -1,5 +1,4 @@
-"use client";
-
+import * as React from "react";
 import { useMutation } from "@tanstack/react-query";
 import { PrimaryButton, Select } from "flicket-ui";
 import { useState } from "react";

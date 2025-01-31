@@ -1,9 +1,8 @@
 // app/routes/index.tsx
 import { GraphQLClient } from "graphql-request";
 import { getSdk } from "./sdk";
-import { env } from "~/shared/env";
 
-export const graphUrl = env.NEXT_PUBLIC_GRAPH_URL;
+export const graphUrl = process.env.GATSBY_GRAPH_URL!;
 
 const client = (
   orgId: string | undefined = undefined,
@@ -14,7 +13,7 @@ const client = (
   new GraphQLClient(graphUrl, {
     credentials: "include",
     headers: {
-      "user-token": env.NEXT_PUBLIC_VERCEL_USER_TOKEN,
+      "user-token": process.env.GATSBY_VERCEL_USER_TOKEN!,
       ...(orgId
         ? {
           "Flicket-Org-Id": orgId,

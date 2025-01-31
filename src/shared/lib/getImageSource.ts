@@ -1,7 +1,6 @@
 import { type ExtendedFile } from "../graphql/sdk";
-import { env } from "~/shared/env";
 
-export const uploadsFolder = env.NEXT_PUBLIC_UPLOADS_FOLDER;
+export const uploadsFolder = process.env.GATSBY_UPLOADS_FOLDER;
 
 export const getImageSrc = (
   file: ExtendedFile | string,

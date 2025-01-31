@@ -1,5 +1,4 @@
-"use client";
-
+import * as React from "react"
 import { Text } from "~/shared/components/ui/Text";
 import { Scan } from "@phosphor-icons/react";
 import { Stack } from "~/shared/components/ui/layout/Stack";

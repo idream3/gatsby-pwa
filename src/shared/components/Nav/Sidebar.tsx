@@ -1,4 +1,4 @@
-
+import * as React from "react";
 
 import {
   Gear,
@@ -8,8 +8,8 @@ import {
   UserCircle,
 } from "@phosphor-icons/react";
 import { AnimatePresence } from "motion/react";
-import { EnableSafeModeButton } from "~/features/auth/components/EnableSafeModeButton";
-import { LogoutButton } from "~/features/auth/components/LogoutButton";
+// import { EnableSafeModeButton } from "~/features/auth/components/EnableSafeModeButton";
+// import { LogoutButton } from "~/features/auth/components/LogoutButton";
 import { Text } from "~/shared/components/ui/Text";
 import { Box, Stack } from "~/shared/components/ui/layout";
 import { useAppStore } from "~/shared/providers/appStoreProvider";
@@ -98,11 +98,11 @@ export default function Sidebar({
 
               <List title="Account">
                 <Ul>
-                  {!safeModeEnabled && (
+                  {/* {!safeModeEnabled && (
                     <EnableSafeModeButton onEnable={() => onClose(false)} />
-                  )}
+                  )} */}
 
-                  <LogoutButton onLogout={() => onClose(false)} />
+                  {/* <LogoutButton onLogout={() => onClose(false)} /> */}
                 </Ul>
               </List>
             </Stack>

@@ -1,22 +1,21 @@
 import * as React from "react"
 import { Link, type HeadFC, type PageProps } from "gatsby"
 
-// import { MainHeader } from "~/features/home/components/MainHeader";
 import DarkBackground from "~/shared/components/DarkBackground";
 import { PrimaryButton, SecondaryButton } from "~/shared/components/ui/Button";
 import { Box, Stack } from "~/shared/components/ui/layout";
 import { Text } from "~/shared/components/ui/Text";
-import Providers from "../shared/providers";
 import { navigate } from 'gatsby'
+import { MainHeader } from "~/features/home/components/MainHeader";
 
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <Providers>
+    
     <Box>
     <DarkBackground />
     <Stack gap={3} direction="vertical">
-      {/* <MainHeader /> */}
+      <MainHeader />
 
       <Stack gap={3} direction="vertical">
         <Card>
@@ -50,7 +49,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </Stack>
     </Stack>
   </Box>
-  </Providers>
+
   )
 }
 
