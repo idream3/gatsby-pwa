@@ -37,7 +37,11 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/404/`, `/*`, `/docs/`, `/about/`, `/login/`, `/scan/`],
+        precachePages: [
+          "/login/",
+          "/scan",
+          "/404/",
+        ],
         workboxConfig: {
           globDirectory: "public/",
           globPatterns: [
