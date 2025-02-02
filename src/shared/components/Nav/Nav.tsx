@@ -38,6 +38,7 @@ export default function Nav() {
       <StyledNav px={2}>
         <Box>
           <Link to="/">
+          {/*  */}
             {/* <Image
               src={getImageSrc(
                 organization?.branding?.logo ?? "/flicket-logo.svg",
